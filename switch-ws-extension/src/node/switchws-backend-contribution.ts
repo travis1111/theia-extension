@@ -15,7 +15,7 @@ export class SwitchWSBackendContribution implements BackendApplicationContributi
 
     configure(app: express.Application) {
         app.get('/switch', (req, res) => {
-            await this.workspaceServer.setRoot(rootUri);
+            await this.workspaceServer.setRoot("/home");
             res.send("done!");
         });
     }
