@@ -1,0 +1,35 @@
+{
+  "name": "switch-ws-extension",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "description": "Switch workspace",
+  "dependencies": {
+    "@theia/core": "^0.3.7",
+    "@theia/workspace": "^0.3.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "theiaExtensions": [
+    {
+      "backend": "lib/node/switchws-backend-module"
+    }
+  ],
+  "license": "Apache-2.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  }
+}
